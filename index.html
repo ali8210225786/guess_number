@@ -28,16 +28,39 @@
     <button id="btn">Guess</button>
 
     <script>
+        //const 用在不會再改變的時候
         const btn = document.getElementById('btn');
         const random = Math.floor(Math.random()*6 )+1;
         btn.addEventListener("click",function (e) {
-            const num = document.getElementById('num').value;
-            console.log(random);
-            console.log(num.value);
+            let num = document.getElementById('num').value;
+            // console.log(random);
+           
             if (! num) {
                 alert('請輸入數字');
                 return;
             }
+            if (num > 6 || num < 0) {
+                alert('請輸入數字1~6');
+                return;
+            }
+            
+            //將字串轉為整數
+            num = parseInt(num);
+            console.log(typeof num);
+            console.log(typeof random);
+
+            //使用===型態也要相同才會相等
+            if (num === random) {
+                alert('Bingo');
+                return;
+            }
+            if (num > random) {
+                alert('太大了，再小一點');
+                return;
+            } 
+
+                alert('太小了，再大一點');
+                
             
         });
 
