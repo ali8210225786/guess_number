@@ -24,7 +24,7 @@
 </head>
 <body>
     <h1>Guess Number</h1>
-    <input type="text" id="num">
+    <input type="number" id="num">
     <button id="btn">Guess</button>
 
     <script>
@@ -32,13 +32,13 @@
         const random = Math.floor(Math.random()*6 )+1;
         btn.addEventListener("click",function (e) {
             const num = document.getElementById('num').value;
+            console.log(random);
+            console.log(num.value);
             if (! num) {
                 alert('請輸入數字');
                 return;
             }
-           
-            console.log(random);
-            console.log(num.value);
+            
         });
 
         
