@@ -37,11 +37,20 @@
             // console.log(random);
            
             if (! num) {
-                alert('請輸入數字');
+                Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '需要輸入數字喔',
+                })
+               
                 return;
             }
             if (num > 6 || num < 0) {
-                alert('請輸入數字1~6');
+                Swal.fire({
+                title: 'Oh!Oh!',
+                text: '請輸入數字1~6',
+                icon: 'error',
+                })
                 return;
             }
             
