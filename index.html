@@ -61,7 +61,11 @@
 
             //使用===型態也要相同才會相等
             if (num === random) {
-                alert('Bingo');
+                Swal.fire({
+                icon: 'success',
+                title: 'YeaH!!',
+                text: '猜對囉!',
+                })
                 return;
             }
             if (num > random) {
