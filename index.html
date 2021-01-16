@@ -69,11 +69,19 @@
                 return;
             }
             if (num > random) {
-                alert('太大了，再小一點');
+                Swal.fire({
+                title: 'Oh!Oh!',
+                text: '要小一點唷',
+                icon: 'warning',
+                })
                 return;
             } 
 
-                alert('太小了，再大一點');
+                Swal.fire({
+                title: 'Oh!Oh!',
+                text: '要大一點唷',
+                icon: 'warning',
+                })
                 
             
         });
